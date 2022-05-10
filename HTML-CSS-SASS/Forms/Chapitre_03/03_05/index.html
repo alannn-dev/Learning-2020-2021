@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+    <section>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam, esse minus! A ipsam veniam voluptate repudiandae asperiores aliquid, repellendus ipsa molestias, blanditiis doloremque. Incidunt laborum alias dolorum dolor labore.</p>
+        <form action="contact.php" method="post">
+            <div class="text">
+                <label for="name">Votre nom complet</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div class="text">
+                <label for="subject">Sujet de votre message</label>
+                <input type="text" name="subject" id="subject" list="subject-hint" />
+                <datalist id="subject-hint">
+                   <option value="Demande de support" />
+                   <option value="Demande de renseignements" />
+                   <option value="Service après-vente" />
+                   <option value="Problème de facturation" />
+                   <option value="Problème de livraison" />
+                </datalist>
+            </div>
+            <div class="textarea">
+                <label for="message">Votre message</label>
+                <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

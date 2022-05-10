@@ -1,0 +1,131 @@
+.singleArt{
+  #singleArtPict{
+    background: theme-color("felice-dark-brown");
+    @extend .justify-content-between;
+    > a{
+      display: block;
+      background: theme-color("felice-red");
+      color: theme-color("felice-yellow");
+      @extend .col-1;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      text-decoration: none;
+      @include transition($btn-transition);
+      &:hover i{
+        color: theme-color("felice-dark-brown");
+      }//end #singleArtPict > a:hover
+    }//end #singleArtPict > a
+    > a.disabled{
+      color: $gray-600;
+      &:hover i{
+        color: $gray-600;
+      }//end a.disables:hover
+    }//end a.disables
+    > section {
+      @extend .py-3;
+      @extend .col-10;
+      @extend .col-xl-6;
+      figure{
+        margin: 0;
+        figcaption{
+          @include make-row();
+          @extend .pt-3;
+          h1{
+            color: theme-color("felice-yellow");
+            font-size: $h3-font-size;
+            @extend .col-12;
+            @extend .col-sm-6;
+          }//end h1
+          #a2a{
+            @include media-breakpoint-down(sm) {
+              display: none;
+            }
+            @extend .col-6;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            a{
+              float: none;
+            }
+          }//end #a2a
+        }//end ficgaption
+      }//end figure
+    }// end #singleArt section
+  }//end #singleArtPict
+  #singleArtDescr, #singleArtMetadata{
+    justify-content: center;
+    > section{
+      @extend .col-10;
+      @extend .col-xl-6;
+      @extend .py-3;
+    }//end #singleArtDescr > section, #singleArtMetadata > section
+  }//end Single Art Descr, #singleArtMetadata
+  #singleArtDescr{
+    >section{
+      border-bottom: solid 2px theme-color("felice-red");
+    }
+  }//end Single Art Descr
+  #singleArtMetadata{
+    ul{
+      @include make-invisible-list();
+      @include make-row();
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+      li{
+        color: theme-color("felice-red");
+        font-size: $font-size-sm;
+        @extend .col;
+        i{
+          @extend .mr-3;
+        }
+      }//end li
+    }//end ul
+  }//end ##singleArtMetadata
+  #singleArtRealted{
+    background: theme-color("felice-green");
+    @extend .py-3;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    h1{
+      @extend .col-12;
+      color: theme-color("felice-red");
+      font-size: $h3-font-size;
+    }
+    ul{
+      @extend .col-12;
+      @include make-invisible-list();
+      display: flex;
+      justify-content: center;
+      li{
+        @extend .col-3;
+        a{
+          text-decoration: none;
+          figure{
+            position: relative;
+            img{
+              @include border-radius();
+            }
+            figcaption{
+              @extend .w-100;
+              @extend .p-2;
+              @include feliceTitle(theme-color("felice-light-brown"));
+              font-size: $h6-font-size;
+              font-style: italic;
+              position: absolute;
+              bottom: 0;
+              @include background-opacity(theme-color("felice-white"));
+              @include border-bottom-radius($border-radius);
+            }//end figcaption
+          }//end figure
+          &:hover figure figcaption{
+            @include background-opacity(theme-color("felice-white"), 1);
+            @include transition($btn-transition);
+          }//end :hover
+        }//end a
+      }//end li
+    }//end ul
+  }//end #singleArtRealted
+}//end .single Art

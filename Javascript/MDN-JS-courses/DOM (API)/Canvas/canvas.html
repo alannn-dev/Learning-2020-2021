@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+<!-- SUPPRESSION BARRE DE DÉFILEMENT-->
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+
+  </head>
+  <body>
+
+
+    <canvas class="myCanvas">
+        <p>Ajouter un contenu alternatif approprié ici.</p>
+      </canvas>
+   
+   <script>
+
+    var canvas = document.querySelector('.myCanvas');
+    var width = canvas.width = window.innerWidth;
+    var height = canvas.height = window.innerHeight;
+    
+    var ctx = canvas.getContext('2d'); // CONTEXTE DU CANVAS
+
+    ctx.fillStyle = 'rgb(0, 0, 0)'; // Coloriage du contexte
+    ctx.fillRect(0, 0, width, height); // Dessin rectangle (Coordonnée supérière gauche, et largeur + hauteur)
+   
+    ctx.fillStyle = 'rgb(255, 0, 0)'; 
+    ctx.fillRect(50, 50, 100, 150);  // Création rectangle (rouge)
+
+    ctx.fillStyle = 'rgb(0, 255, 0)';
+    ctx.fillRect(75, 75, 100, 100);   // Création rectangle (vert)
+   
+    ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
+    ctx.fillRect(25, 100, 175, 50);   // Création rectangle (transparent)
+
+    ctx.strokeStyle = 'rgb(255, 255, 255)'; // Couleur contour
+    ctx.lineWidth = 5;  // Épaisseur countour blanc
+    ctx.strokeRect(25, 25, 175, 200);   // Dessin contour
+
+
+   </script>
+  </body>
+</html>

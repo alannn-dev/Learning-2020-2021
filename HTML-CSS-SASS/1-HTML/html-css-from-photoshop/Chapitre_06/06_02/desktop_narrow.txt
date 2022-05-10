@@ -1,0 +1,61 @@
+/*Buttons*/
+	.button a{
+		height: 40px;
+		width: 40px;
+		font-size: 16pt;
+	}
+	/*header*/
+	#header{
+		height: 100px;
+	}
+	#header figure{
+		width: 82.926%;
+	}
+	#header figure img{
+		max-width: 28.313%; /*3 colonnes sur 10*/
+        margin-right: 10px;
+		vertical-align: middle;
+	}
+	#header figure figcaption {
+		display: inline-block;
+        vertical-align: middle;
+		font-size: 18pt;
+	}
+	#header ul{
+		width: 14.634%;
+	}
+	/*Nav*/
+	#mainNav p{
+		display: none;
+	}
+	#mainNav ul{
+		display:block!important;
+	}
+	#mainNav ul li{
+		display: inline-block
+	}
+	
+	/*Footer*/
+	#footer #footerAddress{
+		width: 31.707%;
+		border-right: 2px solid #FFF;
+		padding-right: 20px
+	}
+	#footer #footerAddress figure{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#footer #footerAddress figure img{
+		width: 100%;
+		margin-bottom: 10px
+	}
+	#footer #footerAddress address {
+		display: block;
+	}
+	#footer #footerLegal{
+		width: 31.707%;
+		padding: 0px 10px;
+	}
+	#footer #footerLanguage{
+		width: 31.707%;
+	}

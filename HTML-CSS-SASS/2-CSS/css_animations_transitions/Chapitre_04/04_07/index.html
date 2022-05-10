@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Découvrir les propriétés des animations</title>
+  <style>
+    body{
+      padding: 100px;
+      background: #24436E;
+    }
+
+    section{
+        height: 300px;
+        width: 300px;
+        background: #8C57AC;
+        color:#FFF;
+        font-size: 2em;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border: solid 6px #C68335;
+        border-radius: 50%;
+        animation: slide 4s 2s both infinite alternate ease-in-out;
+    }
+
+    @keyframes slide{
+      0% {transform: translateX(0) rotate(0);}
+      100%{transform: translateX(800px) rotate(3turn);}
+    }
+  </style>
+</head>
+<body>
+  <section><p>Animez-moi<p></section>
+</body>
+</html>

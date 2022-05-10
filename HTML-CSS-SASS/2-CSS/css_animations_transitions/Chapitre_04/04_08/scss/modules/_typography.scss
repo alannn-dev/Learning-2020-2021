@@ -1,0 +1,66 @@
+.mainText{
+  clear: both;
+  h1{
+    color: theme-color("felice-red");
+  }//end h1
+  h2{
+    color: theme-color("felice-red");
+  }//end h2
+  h3{
+    color: theme-color("felice-red");
+  }//end h"
+  p{
+    line-height: 2rem;
+  }//end p
+  li{
+    line-height: 2rem;
+  }//end li
+  .alignLeft{
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+  .alignRight{
+    float: right;
+    margin: 0 0 10px 10px;
+  }
+  a{
+    color: theme-color("felice-orange");
+    &:hover{
+      color: theme-color("felice-light-brown");
+      text-decoration: none;
+    }//end a:hover
+  }//ens a
+  form{
+    @extend .py-3;
+    .form-group{
+      label{
+        color: theme-color("felice-light-brown");
+      }
+      small {
+        color: theme-color("felice-white") !important;
+      }
+      input, textarea, select {
+        color: theme-color("felice-grey");
+      }//end select
+      .feliceMessage {
+        min-height: 175px
+      }
+    }//end .form-group
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: theme-color("felice-grey");
+      opacity: 1; /* Firefox */
+    }
+
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: theme-color("felice-grey");
+    }
+
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: theme-color("felice-grey");
+    }
+    button{
+      @extend .btn;
+      @include feliceButton();
+    }//end button
+  }//End form
+}//end .mainText

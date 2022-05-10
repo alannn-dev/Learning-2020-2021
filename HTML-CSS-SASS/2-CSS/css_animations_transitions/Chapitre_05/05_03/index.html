@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Animations 3d</title>
+  <link rel="stylesheet" href="animate.css">
+  <style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+  body{
+    padding: 100px;
+    background: #24436E;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  h1{
+    text-align: center;
+    color: #8C57AC;
+    font-size: 5em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    perspective: 200px;
+  }
+  h1 span:nth-child(even){
+    color: #C68335;
+  }
+  h1 span{
+    display: inline-block;
+    animation: rotateIntoPlace 5s;
+    background: #498BE6;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <h1 class="animated wobble">
+    <span>A</span><span>n</span><span>i</span><span>m</span><span>e</span><span>z</span><span>-</span><span>m</span><span>o</span><span>i</span><span>!</span>
+  </h1>
+
+</body>
+</html>

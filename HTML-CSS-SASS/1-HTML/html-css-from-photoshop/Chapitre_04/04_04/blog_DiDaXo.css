@@ -1,0 +1,107 @@
+/*
+Palette de couleurs
+
+Bleu foncé      #262087     rgb(38, 32, 135)
+Bleu clair      #59bdff     rgb(89, 189, 255)
+Gris foncé      #333333     rgb(51, 51, 51)
+Gris clair      #ebe6e1     rgb(235, 230, 225)
+Blanc           #FFF        rgb(255, 255, 255)
+Vert            #20875a     rgb(32, 135, 90)
+Rouge           #ba196a     rgb(186, 25, 106)
+
+*/
+/*Importer les Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Raleway');
+
+/*styles principaux*/
+body{
+    background-color: #ebe6e1;
+    font-family: Raleway, Verdana, sans-serif;
+    color: #333333;
+}
+.wrapper{
+    max-width: 768px;
+    margin: 0px auto;
+}
+img.responsive{
+    width: 100%;
+    height: auto;
+}
+
+/*boutons*/
+.button-group{
+    font-size: 0;
+}
+.button-group li{
+    display: inline-block;
+}
+.button-group li a{
+    border-radius: 0;
+}
+.button-group li:first-child a{
+    border-radius: 5px 0px 0px 5px;
+}
+.button-group li:last-child a{
+    border-radius: 0px 5px 5px 0px;
+}
+.button a{
+    background-color: #FFF;
+    text-align: center;
+    padding-top: 6px;
+    border: solid 2px #59bdff;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 30pt;
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+.button a:hover{
+    background-color: #59bdff;
+}
+
+
+/*header*/
+#header{
+    background-color: #262087;
+    padding: 0px 20px;
+    height: 120px;
+    padding-top: 20px;
+}
+#header figure{
+    width: 65.853%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#header figure img {
+    max-width: 48.148%;
+}
+#header figure figcaption{
+    color: #FFF;
+}
+#header ul{
+    width: 31.707%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+
+
+
+#mainNav{
+    background-color: #333333;
+    padding: 0px 20px;
+}
+#title{
+    background-color: #20875a;
+    padding: 0px 20px;
+}
+#mainContent{
+    background-color: #ebe6e1;
+    padding: 0px 20px;
+}
+#footer{
+    background-color: #333333;
+    padding: 0px 20px;
+}

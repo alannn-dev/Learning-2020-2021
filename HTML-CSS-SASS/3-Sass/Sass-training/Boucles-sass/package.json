@@ -1,0 +1,11 @@
+{
+  "name": "boucles",
+  "version": "1.0.0",
+  "description": "npm-init",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch./Boucles/style.scss:./Boucles/Public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

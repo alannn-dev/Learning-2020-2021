@@ -1,0 +1,70 @@
+:root{
+    --page-background: #d8d8d8;
+    --form-background: #FFF;
+    --dark-grey: #2e2e2e;
+    --title-color: #9f0d0d;
+    --default-space: 20px;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    background: var(--page-background);
+    font-family: Verdana, sans-serif;
+    font-size: 1em;
+}
+section {
+    margin: 0 auto;
+    width: 980px;
+}
+section > h1{
+    color: var(--title-color);
+
+}
+input, select, button, textarea{
+    font-size: inherit;
+    font-family: inherit;
+}
+form {
+    background: var(--form-background);
+    padding: var(--default-space);
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    margin-bottom: var(--default-space);
+}
+form > div {
+    margin-bottom: var(--default-space);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+form label{
+    padding-right: 10px;
+}
+form input{
+    padding: 5px;
+    width: 100%;
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    color: var(--dark-grey);
+}
+form input:focus{
+    box-shadow: 0px 0px 3px rgba(68, 141, 195, 0.75);
+}
+form textarea{
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    height: 150px;
+    padding: 5px;
+}
+form button{
+    background: linear-gradient(#ffffff, #e0e0e0);
+    border: 1px solid var(--dark-grey);
+    padding: 10px;
+    border-radius: 5px;
+    grid-column: 1 / -1;
+}
+form button:hover{
+    background: linear-gradient(#9f0d0d, #ad2424);
+    color: #FFF;
+}

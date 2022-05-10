@@ -1,0 +1,31 @@
+html.mura-edit-mode{
+  #feliceMainHeader{
+    margin-top: 32px;
+  }
+  #mainContent{
+    margin-top: 72px + 32px;
+  }
+  #collapsibleSearch{
+    top: 72px + 32px;
+  }
+}
+
+body{
+  background: url('../images/background_light.jpg');
+  background-size: cover;
+}
+//make image responsive
+img{
+  width: 100%;
+  height: auto;
+}
+
+//compensate fixed top / bottom
+#mainContent{
+  margin-top: 72px;
+  margin-bottom: 31px;
+  @include make-container();
+  > div{
+    @include make-row();
+  }
+}

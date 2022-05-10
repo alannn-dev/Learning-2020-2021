@@ -1,0 +1,34 @@
+.button {
+    font-family: sans-serif;
+    border: none;
+    padding: 10px 10px 10px 52px; // On laisse de la place à gauche
+    background-color: #fe0;
+    position: relative; // Pour pouvoir placer l'icône en absolute à l'intérieur
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+
+    &:hover {
+        background-color: lighten(#fe0, 20%); // C'est plus sympa, non oui ?
+    }
+} 
+&::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top :10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    background-image: url(Users/alan/Downloads/dev/Boucles/Public/Img/sprite.png);
+}
+
+$icons: 'settings', 'watch', 'power', 'fullscreen', 'reduce';
+
+@for $i from 1 through 5 {
+.icon-#{nth($icons, $i)}::before {
+    $pos: -32px * ($i - 1); // On commence à 0 et on termine à 32*4px
+    background-position-x: $pos;
+}
+}
+

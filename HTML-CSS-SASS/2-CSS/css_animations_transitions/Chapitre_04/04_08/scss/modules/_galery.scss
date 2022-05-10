@@ -1,0 +1,164 @@
+#mainContent.galery{
+  #galeryList{
+    @extend .col;
+    #loading{//this is a <p> element
+      height:100vh;
+      text-align: center;
+      font-size: $h4-font-size *3;
+      color: theme-color("felice-red");
+    }
+    #innerGalleryWrapper{//this is a ul element
+      padding: 0;
+      @include make-row();
+      list-style:none;
+      li.noArt{
+        @extend .col-12;
+        > p {
+          font-size: $h1-font-size;
+          color: theme-color("felice-red");
+        }
+      }
+      li{
+        @extend .col-12;
+        @extend .col-sm-6;
+        @extend .col-lg-4;
+        @extend .col-xl-3;
+        margin: 15px 0;
+        article{
+          @extend .card;
+          border-color: theme-color("felice-red");
+          background:theme-color("felice-white");
+          height: 100%;
+          img{
+            @extend .card-img-top;
+          }
+          > div{
+            @extend .card-body;
+            @extend .d-flex;// make it a flex container so last child (more button) can be pushed to bottom
+            @extend .flex-column;
+            h1{
+              @extend .card-title;
+              font-size: $h4-font-size;
+              @include feliceTitle(theme-color("felice-light-brown"));
+            }//end h1
+            p{
+              @extend .card-text;
+              color: theme-color("felice-grey");
+              font-size: $font-size-sm;
+              a{
+                @extend .btn;
+                @include feliceButton(theme-color("felice-red"), theme-color("felice-yellow"), theme-color("felice-white"));
+              }//end a
+              &:last-child{
+                margin-top:auto;//pushes "more" button to bottom
+              }
+            }//end p
+          }//end article > div
+        }//end article
+      }//end li
+    }//end #innerGalleryWrapper
+  }//end GaleryList
+  #searchPanel{
+    background: theme-color("felice-red");
+    position: fixed;
+    right: 0;
+    height: 100%;
+    padding: map-get($spacers, 3);
+    @extend .col-4;
+    @extend .col-lg-3;
+    @extend .col-xl-2;
+    @include media-breakpoint-down(sm) {
+      display:none !important;
+    }//end media-breakpoint-down(sm)
+    #searchPanelForm{
+      #sidebarSearch {
+        @extend .input-group;
+        width: 100%;
+        > label{
+          @extend .input-group-prepend;
+          background: theme-color("felice-white");
+          color: theme-color("felice-red");
+          margin-bottom: 0;
+          @include border-left-radius(4px);
+          i{
+            @extend .input-group-text;
+          }
+        }//end #searchPanelForm > #sidebarSearch > label
+        > input {
+          @extend .form-control;
+
+
+        }//end #searchPanelForm > #sidebarSearch > input
+      }//end #searchPanelForm #sidebarSearch
+      > hr{
+        border-top: solid 1px theme-color("felice-yellow");
+      }// end #searchPanelForm > hr
+      div.dropdown{
+        > button{
+          @extend .btn;
+          @extend .dropdown-toggle;
+          @extend .w-100;
+          @include feliceButton();
+          text-align: left;
+        }//end div.dropdown > button
+        > ul{
+          @extend .dropdown-menu;
+          @extend .px-2;
+          @extend .py-2;
+          @extend .w-100;
+          >li{
+            @extend .form-check;
+            label{
+              @extend .form-check-label;
+              color: theme-color("felice-red");
+            }//end #searchPanelForm > ul li label
+            input{
+              @extend .form-check-input;
+            }//end #searchPanelForm > ul li input
+          }
+        }//end div.dropdown > ul
+      }//end div.dropdown
+    }//end #searchPanelForm
+  }//end#searchPanel
+}//end #mainContent.galery
+//////////////////
+//Show Sidebar
+//////////////////
+#mainContent.galery {
+  .sbDisplay{
+    #galeryList{
+      @include media-breakpoint-up(md) {
+        @include calculate-right-margin(4);
+      }
+      @include media-breakpoint-up(lg) {
+        @include calculate-right-margin(3);
+      }
+      @include media-breakpoint-up(xl) {
+        @include calculate-right-margin(2);
+      }
+      transition: margin .3s ease-in-out;
+    }//end #galeryList in .sbDisplay
+    #searchPanel{
+      transition: width .5s ease-in-out, padding .5s ease-in-out;
+      * {
+        opacity: 1;
+        transition: opacity .2s ease-in-out .2s;
+      }//end #searchPanel
+    }
+  }//end .sbDisplay
+  .sbHidden{
+    #galeryList{
+      margin-right:0;
+      transition: margin .3s ease-in-out .2s
+    }//end #galeryList in .sbDisplay
+    #searchPanel{
+      width: 0;
+      padding: 0;
+      transition: width .5s ease-in-out, padding .5s ease-in-out;
+      *{
+        opacity: 0;
+        transition: opacity .2s;
+      }//end #searchPanel
+    }//end #searchPanel in .sbDisplay
+  }//end .sbHidden
+}

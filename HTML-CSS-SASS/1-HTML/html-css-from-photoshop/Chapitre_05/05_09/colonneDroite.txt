@@ -1,0 +1,51 @@
+/*Section À propos*/
+#mainContent aside #about p{
+	padding: 15px;
+	font-style: italic;
+}
+#mainContent aside  #about p strong{
+	font-weight: bold;
+	font-style: normal;
+}
+/*Section share*/
+#mainContent aside #share #a2a{
+	padding: 15px;
+}
+/*Section Catégories*/
+#mainContent aside #categories ul{
+	padding: 15px
+}
+#mainContent aside #categories ul li{
+	margin-bottom: 3px;
+}
+#mainContent aside #categories ul li a{
+	display: block;
+	text-decoration: none;
+	color: #A8A8A8;
+	padding: 5px;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 364px;
+	position: relative;
+}
+#mainContent aside #categories ul li a span{
+	display: inline-block;
+	background-color: #A8A8A8;
+	color: #BA196A;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 2px;
+	font-weight: bold;
+	position: absolute;
+	right: 15px;
+	bottom: 4px;
+	vertical-align: middle;
+}
+#mainContent aside #categories ul li a:hover{
+	background-color: #EBE6E1;
+}
+#mainContent aside #categories ul li a:hover span{
+	background-color: #FFF;
+}

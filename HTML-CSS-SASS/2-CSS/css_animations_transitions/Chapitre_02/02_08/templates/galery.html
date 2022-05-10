@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="../css/art-felice.css">
+  <style>
+  /*********************/
+  /*sideBar displayed*/
+  /*********************/
+  @media (min-width: 768px) {
+      #mainContent.galery .sbDisplay #galeryList {
+        margin-right: 33.3333333333%;
+      }
+    }
+  @media (min-width: 992px) {
+    #mainContent.galery .sbDisplay #galeryList {
+      margin-right: 25%;
+      }
+    }
+  @media (min-width: 1200px) {
+    #mainContent.galery .sbDisplay #galeryList {
+      margin-right: 16.6666666667%;
+      }
+    }
+  #mainContent.galery .sbDisplay #galeryList {
+    transition: margin .3s ease-in-out;
+  }
+
+  #mainContent.galery .sbDisplay #searchPanel {
+    transition: width .5s ease-in-out, padding .5s ease-in-out;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+  }
+  #mainContent.galery .sbDisplay #searchPanel * {
+    opacity: 1;
+    transition: opacity .2s ease-in-out .2s;
+  }
+  /*********************/
+  /*Sidebar hidden*/
+  /*********************/
+  #mainContent.galery .sbHidden #galeryList {
+    margin-right: 0;
+    transition: margin 0.3s ease-in-out 0.2s;
+  }
+  #mainContent.galery .sbHidden #searchPanel {
+    width: 0;
+    padding: 0;
+    transition: width .5s ease-in-out, padding .5s ease-in-out;
+  }
+  #mainContent.galery .sbHidden #searchPanel * {
+    opacity: 0;
+    transition: opacity .2s;
+  }
+
+  </style>
+</head>
+<body>
+<!--Begin Navbar header-->
+<header class="navbar navbar-light navbar-expand-md fixed-top" id="feliceMainHeader">
+  <!---Art Felice logo on NavBar--->
+  <figure class="navbar-brand">
+    <!---Hide if home page--->
+    <a href="index.html">
+      <img src="../images/art-felice-logo.svg" alt="Art Felice Logo" id="art-felice-logo" />
+    </a>
+  </figure>
+  <!---End Art Felice logo on NavBar--->
+  <!---Navbar content to toggle on mobile--->
+  <!--Navbar toggler for mobile devices-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!--End Navbar toggler for mobile devices-->
+  <div id="navbarToggleContent" class="collapse navbar-collapse justify-content-end mr-4">
+    <!--Begin main navigation-->
+    <nav id="mainNav">
+      <ul class="navbar-nav" id="feliceMainNav">
+        <li class="nav-item active">
+          <a href="index.html" class="nav-link font-italic">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a href="galery.html" class="nav-link font-italic">Galerie</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link font-italic">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link font-italic">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!--End main navigation-->
+    <!--Search field on mobile-->
+    <form class="form-inline my-2 d-md-none">
+        <input class="form-control mr-2 w-100" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    <!---End Navbar content to toggle on mobile--->
+  </div>
+  <!--Search Button on Desktop / tablets-->
+  <button type="button" class="btn d-none d-md-block" id="navbarSearchButton">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
+  <!--End Search Button on Desktop / tablets-->
+</header>
+<!---end Navbar--->
+
+<!---Collapsible search bar--->
+<form id="collapsibleSearch">
+    <input type="search" placeholder="Search" aria-label="Search">
+</form>
+<!---end collapsible searchBar--->
+
+
+<!---begin main page content--->
+<main id="mainContent" class="galery">
+  <div id="mainContentRow" class="sbHidden"><!---Serves as a bootstrap row--->
+      <div id="galeryList">
+        <ul id="innerGalleryWrapper"><!---Serves as a nested bootstrap row--->
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+
+
+
+          <li><!---serves as bootstrap col-3--->
+            <article><!---Serves as Bootstrap card--->
+              <img src="../images/dummyArt.jpg" alt="DummyArt">
+              <div><!---Serves as Bootstrap card-body--->
+                <h1>Titre du tableau</h1>
+                <p>Acrylique | Nov 2017</p>
+                <p><a href="singleArt.html">Plus de détails</a></p>
+              </div><!---End Bootstrap card-body--->
+            </article>
+          </li>
+      </div><!---End #galeryList--->
+      <section id="searchPanel">
+        <form id="searchPanelForm">
+          <div id="sidebarSearch">
+            <label for="sidebarSearchInput">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </label>
+            <input type="search" placeholder="Recherche" aria-label="Recherche" id="sidebarSearchInput">
+          </div><!---End #sidebarSearch--->
+          <hr />
+          <div class="dropdown" id="techniqueDD">
+            <button type="button" id="techniqueDDMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Technique
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="techniqueDDMenuButton">
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Technique 1
+                </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">
+                Technique 1
+              </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox">
+              Technique 1
+            </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            Technique 1
+          </label>
+      </li>
+          </ul>
+        </div>
+        </form><!---end #searchPanelForm--->
+      </section><!---End #searchPanel--->
+  </div><!---End of first row--->
+
+
+</main>
+<!---end main page content--->
+
+
+
+
+<!---Begin footer--->
+<footer id="mainFooter">
+  <p id="copyright">&copy; 2017 - Art-felice.be<p>
+  <nav id="footerNav">
+    <ul>
+      <li><a href="#">Conditions d'utilisation</a></li>
+      <li><a href="#">Vie privée</a></li>
+    </ul>
+  </nav>
+</footer>
+<!---End footer--->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/galery.js"></script>
+</body>
+</html>

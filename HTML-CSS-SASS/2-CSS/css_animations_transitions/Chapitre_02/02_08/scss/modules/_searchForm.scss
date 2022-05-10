@@ -1,0 +1,16 @@
+#collapsibleSearch{
+  display: none;
+  @extend .py-2;
+  @extend .px-5;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  top: 72px;
+  background: theme-color("felice-red");
+  @include media-breakpoint-down(sm) {
+    display:none !important;
+  }
+  input{
+    @extend .form-control;
+  }//end input
+}//end #collapsibleSearch

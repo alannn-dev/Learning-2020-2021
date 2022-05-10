@@ -1,0 +1,32 @@
+<div class="row">
+				<section id="footerAddress">
+					<figure>
+						<img src="images/DiDaXo_Logo_White.svg" alt="Logo DiDaXo" class="responsive" />
+						<figcaption>Next Gen Learning Toolbox and Facilities</figcaption>
+					</figure>
+					<address>
+						<p>New DiDaXo SPRL<br />
+						Rue Beussart, 50<br />
+						1495 Villers-La-Ville</p>
+						<p>Belgique</p>
+					</address>
+				</section><!--End section #footerAddress-->
+				<section id="footerLegal">
+					<h1>Légal</h1>
+					<ul>
+						<li><a href="#">Conditions générales</a></li>
+						<li><a href="#">Charte vie privée</a></li>
+					</ul>
+				</section><!--end section #footerLegalr-->
+				<section id="footerLanguage">
+					<h1>Cette page en</h1>
+					<ul>
+						<li><a href="#"><img src="images/FR.jpg » alt="drapeau France"  />Français</a></li>
+						<li><a href="#"><img src="images/GB.jpg » alt="drapeau GB" />English</a></li>
+					</ul>
+				</section><!--end section #footerLanguage-->
+			</div>
+			<section id="copyright">
+				<a href="#"><span class="fa fa-mobile"></span>Site Mobile</a>
+				<p>&copy; copyright 2016 - New DiDaXO SPRL</p>
+			</section><!--end section #copyright-->

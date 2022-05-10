@@ -1,0 +1,21 @@
+*{ /* ÉTOILE POUR TOUT SÉLECTIONNER */
+    border-radius:30px;
+    padding: 8px;
+    text-align: center;
+}
+
+body{
+min-height: 100vh;
+transition: 5s;
+}
+
+img {
+margin: 0 auto;
+height: 200px;
+visibility: hidden;
+transition: 1s;
+}
+
+.show{
+    visibility: visible;
+}

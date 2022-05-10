@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="requestAnimationFrame_toupie.css">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p></p>
+    <div>↻</div>
+    
+    <script>
+
+    const spinner = document.querySelector('div');
+    let rotateCount = 0;
+    let startTime = null;
+    let rAF;
+    let spinning = false;
+    
+    function draw(timestamp) {  // TIMESTAMP : Utile vous permet exécuter des choses à des moments précis et à un rythme constant (Temps depuis que requestAnimationFrame s'est exécuté)
+      if(!startTime) {          // (Horodatage)
+      startTime = timestamp;
+      }
+
+      rotateCount = (timestamp - startTime) / 3;
+
+      rotateCount %= 360; // Opérateur modulo % : Donne le reste quand un nombre est divisé par un autre nombre
+
+      spinner.style.transform = `rotate(${rotateCount}deg)`;  // Faire tourner le spinner
+
+      rAF = requestAnimationFrame(draw);  // Démarrer l'animation avec requestAnimationFrame()
+    }
+
+    //draw();  // Appel pour lancer l'animation
+
+    // cancelAnimationFrame(rAF);  // (Annulation de l'animation)
+
+    document.body.addEventListener('click', () => {
+        if(spinning) {
+          cancelAnimationFrame(rAF);
+          spinning = false;
+        } else {
+          draw();
+          spinning = true;
+        }
+      });
+    </script>
+  </body>
+</html>

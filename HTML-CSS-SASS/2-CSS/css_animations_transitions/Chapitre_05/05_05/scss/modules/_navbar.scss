@@ -1,0 +1,27 @@
+#feliceMainHeader{
+  background-color: theme-color("felice-white");
+  .navbar-brand{// figure element
+    margin: 0;
+    img{
+      width: $felice-navbar-logo-width;
+    }//end img
+  }//end navbar-brand figure element
+  #navbarToggleContent{
+    #feliceMainNav{//ul element
+      li{
+        a{
+          @include feliceMenu;//common to header and footer menus
+          font-style: italic;
+          font-weight: 300;
+          font-size: $font-size-lg;
+        }//end a
+        &.active a{
+          color: theme-color("felice-green");
+        }//end .active a
+      }//end Li
+    }//end #feliceMainNav
+  }//end #navbarToggleContent
+  #navbarSearchButton{
+    @include feliceButton();
+  }//end #feliceSearchButton
+}//end #feliceMainHeader
