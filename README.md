@@ -1,25 +1,25 @@
 # Learning-2020-2021
 
-Démarrer avec Sass
+## Démarrer avec Sass
  
-Install
+- Install
 
-Compilation
+- Compilation
 
-LibSass
+- LibSass
 
-Déboguer avec .map.scss
+- Déboguer avec .map.scss
 
-Variables
+- Variables
 
-Opérateurs
+- Opérateurs
 
-Imbriquer les sélecteurs et les propriétés CSS
+- Imbriquer les sélecteurs et les propriétés CSS
 
-Fonctions
+- Fonctions
 
-Organiser son app Sass
+- Organiser son app Sass
 
-Bibliothèques tierces
+- Bibliothèques tierces
 
-Commenter son code
+- Commenter son code
