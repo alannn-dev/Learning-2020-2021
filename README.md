@@ -42,7 +42,7 @@
 
 - @each @for
 
-- Définir et utiliser une map (Ex: map_get()
+- Définir et utiliser une map | Ex: map_get()
 
 
 ## Créer une app avec Sass
