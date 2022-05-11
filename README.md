@@ -1,6 +1,8 @@
 # Learning-2020-2021
 
-## Démarrer avec Sass
+## SASS
+
+### Démarrer avec Sass
  
 - Install
 
@@ -26,7 +28,7 @@
 
 
 
-## Réutiliser son code
+### Réutiliser son code
 
 - @extend 
 - 
@@ -36,7 +38,7 @@
 
 
 
-## Fonctions avancées de Sass
+### Fonctions avancées de Sass
 
 - @if @else
 
@@ -45,7 +47,7 @@
 - Définir et utiliser une map | Ex: map_get()
 
 
-## Créer une app avec Sass
+### Créer une app avec Sass
 
 -> Chapitre 6 : Final
 
