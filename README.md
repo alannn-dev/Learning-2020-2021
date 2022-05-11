@@ -30,7 +30,7 @@
 
 - @extend 
 - 
-- @mixins
+- @mixins | @include
 - 
 - @fonctions personnalisées
 
@@ -49,5 +49,7 @@
 
 -> Chapitre 6 : Final
 
+
+## Doc
 
 https://sass-lang.com/documentation
