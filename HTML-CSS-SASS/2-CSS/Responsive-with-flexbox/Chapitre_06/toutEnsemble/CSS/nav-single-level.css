@@ -1,0 +1,13 @@
+/* Styles pour la navigation à un seul niveau */
+
+@media screen and (min-width: 450px) {
+	.single-nav ul{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.single-nav li{
+		flex: 1 0 auto;
+		text-align: center;
+	}
+}

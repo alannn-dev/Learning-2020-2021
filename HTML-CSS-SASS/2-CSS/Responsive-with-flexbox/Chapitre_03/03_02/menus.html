@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <title>Démo Flexbox : menus</title>
+                
+    <link rel="stylesheet" href="style-menus.css" type="text/css" media="all">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+</head>
+    
+<body>
+    <a class="skip-link screen-reader-text" href="#content">Vers le contenu</a>
+
+    <header class="masthead clear">
+        <div class="centered">
+            <div class="site-branding">
+              <h1 class="site-title">Démo Flexbox : menus</h1>
+            </div><!-- .site-title -->
+        </div><!-- .centered -->
+    </header><!-- .masthead -->
+    
+    <main class="main-area">
+        
+        <div class="centered">
+            
+            <section class="menu-section">
+              <h2 class="menu-heading">Menu à un seul niveau</h2>
+              <nav id="single-nav" class="single-nav menu" role="navigation">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Manger</a></li>
+                        <li><a href="#">Cours</a></li>
+                        <li><a href="#">Recettes</a></li>
+                        <li><a href="#">Nouvelles</a></li>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav><!-- #single-nav .single-nav -->
+            </section><!-- menu-section -->
+
+            <section class="menu-section">
+              <h2 class="menu-heading">Menu avancé</h2>
+              <nav id="advanced-nav" class="advanced-nav menu" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                                <div class="button-text">
+                                    L'accueil
+                                    <span>pour se sentir bien dès le départ</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <i class="fa fa-cutlery"></i>
+                                </div>
+                                <div class="button-text">
+                                    La nourriture
+                                    <span>pour le corps et l'esprit</span>
+                                </div>
+                            </a>
+                        </li>
+      
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <i class="fa fa-file-text"></i>
+                                </div>
+                                <div class="button-text">
+                                    Les recettes
+                                    <span>pour guider votre aventure</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <i class="fa fa-paper-plane"></i>
+                                </div>
+                                <div class="button-text">
+                                    Les nouvelles
+                                    <span>pour se tenir au courant</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav><!-- #advanced-nav .advanced-nav -->
+            </section><!-- .menu-section -->
+
+            <section class="menu-section">
+              <h2 class="menu-heading">Menus à plusieurs niveaux (déroulants)</h2>
+              <nav id="multi-level-nav" class="multi-level-nav menu" role="navigation">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li class="has-children">
+                            <a href="#">Nourriture<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">A la recherche d'un chef</a></li>
+                                <li><a href="#">Service traiteur</a></li>
+                                <li><a href="#">Restaurant</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">Cours<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Horaire</a></li>
+                                <li><a href="#">S'inscrire</a></li>
+                                <li><a href="#">Les petits-déjeuners</a></li>
+                                <li><a href="#">Les brunches</a></li>
+                                <li><a href="#">Les déjeuners</a></li>
+                                <li><a href="#">Les dîners</a></li>
+                                <li><a href="#">Les desserts</a></li>
+								<li><a href="#">La pâtisserie</a></li>
+                                <li><a href="#">Les outils</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">À propos</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Notre histoire</a></li>
+                                <li><a href="#">Rencontre avec le chef</a></li>
+                                <li><a href="#">Notre équipe</a></li>
+                                <li><a href="#">Nos vendeurs</a></li>
+                                <li><a href="#">Légal</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav><!-- #multi-level-nav .multi-level-nav -->
+            </section><!-- .menu-section -->
+
+                           
+            <section class="menu-section">
+                <h2 class="menu-heading">Menu social</h2>
+                <nav id="social-menu" class="social-menu menu" role="navigation">
+                    <ul>
+                        <li><a href="http://twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
+                        <li><a href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
+                        <li><a href="http://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
+                        <li><a href="http://youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
+                        <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+                    </ul>
+                </nav><!-- .social-menu -->
+            </section><!-- .menu-section -->
+
+            <section class="menu-section">
+              <h2>Menu mixte (déroulant + social)</h2>
+              <div class="nav-mixed menu">
+                    <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+                        <ul>
+							<li><a href="#">Accueil</a></li>
+							<li class="has-children">
+								<a href="#">Nourriture<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Étendre le sous-menu</span></button></a>
+								<ul class="sub-menu">
+									<li><a href="#">À la recherche d'un chef</a></li>
+									<li><a href="#">Service traiteur</a></li>
+									<li><a href="#">Restaurant</a></li>
+								</ul>
+							</li>
+							<li class="has-children">
+								<a href="#">Cours<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Étendre le sous-menu</span></button></a>
+								<ul class="sub-menu">
+									<li><a href="#">Horaire</a></li>
+                                    <li><a href="#">S'inscrire</a></li>
+                                    <li><a href="#">Les petits-déjeuners</a></li>
+                                    <li><a href="#">Les brunches</a></li>
+                                    <li><a href="#">Les déjeuners</a></li>
+                                    <li><a href="#">Les dîners</a></li>
+                                    <li><a href="#">Les desserts</a></li>
+                                    <li><a href="#">La pâtisserie</a></li>
+                                    <li><a href="#">Les outils</a></li>
+								</ul>
+							</li>
+							<li><a href="#">À propos</a>
+								<ul class="sub-menu">
+									<li><a href="#">Notre histoire</a></li>
+									<li><a href="#">Rencontre avec le chef</a></li>
+									<li><a href="#">Notre équipe</a></li>
+									<li><a href="#">Nos vendeurs</a></li>
+									<li><a href="#">Légal</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Contact</a></li>
+                    	</ul>
+                    </nav><!-- #multi-level-nav .multi-level-nav -->
+
+                    <nav id="social-menu" class="social-menu" role="navigation">
+                        <ul>
+                            <li><a href="http://twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
+                            <li><a href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
+                            <li><a href="http://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
+                            <li><a href="http://youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
+                            <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+                        </ul>
+                    </nav><!-- .social-menu -->
+                </div><!-- .mixed-menu -->
+            </section><!-- .menu-section -->
+            
+        </div><!-- .centered -->
+        
+    </main>
+    
+    <footer class="footer-area">
+        <div class="centered">
+            
+        </div><!-- .centered -->
+    </footer>
+    
+    <script type="text/javascript" src="JS/libs/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="JS/menu-toggle.js"></script>
+</body>
+
+</html>
