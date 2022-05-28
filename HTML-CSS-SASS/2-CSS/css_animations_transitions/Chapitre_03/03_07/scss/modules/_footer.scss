@@ -1,0 +1,31 @@
+#mainFooter{
+    background-color: theme-color("felice-white");
+    color: theme-color("felice-dark");
+    font-size: $font-size-xs;
+    @extend .fixed-bottom;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    @extend .justify-content-md-end;
+    @extend .align-items-center;
+    #copyright{
+      @extend .my-2;
+      @extend .ml-2;
+      @extend .ml-md-0;
+    }
+    nav{
+      @extend .mr-2;
+      @extend .mr-md-4;
+      ul{
+        @extend .d-flex;
+        @extend .m-0;
+        list-style: none;
+        li{
+          margin: 0 .5rem;
+          a{
+            @include feliceMenu;//common to header and footer menus
+            text-decoration: none;
+          }//end a
+        }//end li
+      }//ul
+    }//end nav
+}//end #mainFooter

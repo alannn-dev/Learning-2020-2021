@@ -1,0 +1,34 @@
+@mixin feliceButton($color: theme-color("felice-red"), $background: theme-color("felice-white"), $hoverColor: theme-color("felice-yellow")){
+  color: $color;
+  background-color: $background;
+  border: solid 1px $color;
+  &:hover, &.active {
+    background-color: $hoverColor;
+  }
+}
+
+@mixin feliceMenu {
+  font-family: $felice-title-font;
+  color: theme-color("felice-light-brown");
+  &:hover{
+    color: theme-color("felice-green");
+  }//end :hover
+}
+
+@mixin feliceTitle($color: theme-color("felice-red")) {
+  font-family: $felice-title-font;
+  color: $color;
+}
+@mixin background-opacity($color, $opacity: 0.8) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin calculate-right-margin($size, $columns: $grid-columns){
+  margin-right: percentage($size / $columns);
+}
+@mixin make-invisible-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

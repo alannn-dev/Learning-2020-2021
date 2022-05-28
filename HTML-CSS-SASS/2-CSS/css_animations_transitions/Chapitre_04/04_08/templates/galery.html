@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="../css/art-felice.css">
+  <style>
+      #mainContent #galeryList div.card-flip{
+          perspective: 1000px;
+      }
+      #mainContent #galeryList div.card-flip:hover div.flip{
+          transform: rotateY(180deg);
+      }
+      #mainContent #galeryList div.card-flip div.flip{
+          width: 100%;
+          transition: transform .5s;
+          transform-style: preserve-3d;
+          position: relative;
+      }
+      #mainContent #galeryList div.card-flip div.front, #mainContent #galeryList div.card-flip div.back{
+          position: absolute;
+          top:0;
+          left: 0;
+          width:100%;
+          backface-visibility: hidden;
+      }
+      #mainContent #galeryList div.card-flip div.front{
+          transform: rotateY(0deg);
+          z-index: 2;
+      }
+      #mainContent #galeryList div.card-flip div.back{
+          transform: rotateY(180deg);
+      }
+
+      #mainContent #galeryList{
+         animation: fadeInAndSlide .5s ease-in-out;
+      }
+      
+      @keyframes fadeInAndSlide {
+          from{
+              transform: translateY(30px);
+              opacity: 0;
+          }
+          to{
+              transform: translateY(0);
+              opacity: 1;
+          }
+      }
+      
+  </style>
+</head>
+<body>
+<!--Begin Navbar header-->
+<header class="navbar navbar-light navbar-expand-md fixed-top" id="feliceMainHeader">
+  <!---Art Felice logo on NavBar--->
+  <figure class="navbar-brand">
+    <!---Hide if home page--->
+    <a href="index.html">
+      <img src="../images/art-felice-logo.svg" alt="Art Felice Logo" id="art-felice-logo" />
+    </a>
+  </figure>
+  <!---End Art Felice logo on NavBar--->
+  <!---Navbar content to toggle on mobile--->
+  <!--Navbar toggler for mobile devices-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!--End Navbar toggler for mobile devices-->
+  <div id="navbarToggleContent" class="collapse navbar-collapse justify-content-end mr-4">
+    <!--Begin main navigation-->
+    <nav id="mainNav">
+      <ul class="navbar-nav" id="feliceMainNav">
+        <li class="nav-item active">
+          <a href="index.html" class="nav-link font-italic">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a href="galery.html" class="nav-link font-italic">Galerie</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link font-italic">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link font-italic">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!--End main navigation-->
+    <!--Search field on mobile-->
+    <form class="form-inline my-2 d-md-none">
+        <input class="form-control mr-2 w-100" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    <!---End Navbar content to toggle on mobile--->
+  </div>
+  <!--Search Button on Desktop / tablets-->
+  <button type="button" class="btn d-none d-md-block" id="navbarSearchButton">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
+  <!--End Search Button on Desktop / tablets-->
+</header>
+<!---end Navbar--->
+
+<!---Collapsible search bar--->
+<form id="collapsibleSearch">
+    <input type="search" placeholder="Search" aria-label="Search">
+</form>
+<!---end collapsible searchBar--->
+
+
+<!---begin main page content--->
+<main id="mainContent" class="galery">
+  <div id="mainContentRow" class="sbHidden"><!---Serves as a bootstrap row--->
+      <div id="galeryList">
+        <ul id="innerGalleryWrapper"><!---Serves as a nested bootstrap row--->
+
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front" id="coucouGamin"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt" >
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+          <li><!---serves as bootstrap col-3--->
+            <div class="card-flip">
+              <div class="flip">
+                <div class="front">
+                  <article class="front"><!---Serves as Bootstrap card--->
+                    <img src="../images/dummyArt.jpg" alt="DummyArt">
+                  </article>
+                </div><!--end .front-->
+                <div class="back">
+                  <article class="back"><!---Serves as Bootstrap card--->
+                    <div><!---Serves as Bootstrap card-body--->
+                      <h1>Titre du tableau</h1>
+                      <p>Acrylique | Nov 2017</p>
+                      <p><a href="singleArt.html">Plus de détails</a></p>
+                    </div><!---End Bootstrap card-body--->
+                  </article>
+                </div><!--end.back-->
+              </div><!--end .flip-->
+            </div><!--end .card-flip-->
+          </li>
+
+        </ul>
+      </div><!---End #galeryList--->
+      <section id="searchPanel">
+        <form id="searchPanelForm">
+          <div id="sidebarSearch">
+            <label for="sidebarSearchInput">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </label>
+            <input type="search" placeholder="Recherche" aria-label="Recherche" id="sidebarSearchInput">
+          </div><!---End #sidebarSearch--->
+          <hr />
+          <div class="dropdown" id="techniqueDD">
+            <button type="button" id="techniqueDDMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Technique
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="techniqueDDMenuButton">
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Technique 1
+                </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">
+                Technique 1
+              </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox">
+              Technique 1
+            </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox">
+            Technique 1
+          </label>
+      </li>
+          </ul>
+        </div>
+        </form><!---end #searchPanelForm--->
+      </section><!---End #searchPanel--->
+  </div><!---End of first row--->
+
+
+</main>
+<!---end main page content--->
+
+
+
+
+<!---Begin footer--->
+<footer id="mainFooter">
+  <p id="copyright">&copy; 2017 - Art-felice.be<p>
+  <nav id="footerNav">
+    <ul>
+      <li><a href="#">Conditions d'utilisation</a></li>
+      <li><a href="#">Vie privée</a></li>
+    </ul>
+  </nav>
+</footer>
+<!---End footer--->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/galery.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Comprendre les transitions</title>
+  <style>
+    body{
+      background: #24436E;
+      padding-left: 100px;
+    }
+    div.track{
+      margin: 10px 0;
+    }
+    section{
+      height: 150px;
+      width: 150px;
+      background: #8C57AC;
+      color:#FFF;
+      font-size: 1em;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      border: solid 6px #C68335;
+
+      /*Animated properties*/
+      border-radius: 50%;
+
+      /*Transition*/
+      transition-property: all;
+      transition-duration: 2s;
+    }
+    #section1{
+      transition-timing-function: linear;
+    }
+    #section2{
+      transition-timing-function: ease;
+    }
+    #section3{
+      transition-timing-function: ease-in;
+    }
+    #section4{
+      transition-timing-function: ease-out;
+    }
+    #section5{
+      transition-timing-function: ease-in-out;
+    }
+    #section6{
+      transition-timing-function: cubic-bezier(.55,-0.94,.39,1.57);
+    }
+    section:hover{
+      transform: translateX(800px);
+    }
+  </style>
+</head>
+  <body>
+    <div class="track"><section id="section1"><p>linear<p></section></div>
+    <div class="track"><section id="section2"><p>ease<p></section></div>
+    <div class="track"><section id="section3"><p>ease-in<p></section></div>
+    <div class="track"><section id="section4"><p>ease-out<p></section></div>
+    <div class="track"><section id="section5"><p>ease-in-out<p></section></div>
+    <div class="track"><section id="section6"><p>cubic-bezier()<p></section></div>
+  </body>
+</html>

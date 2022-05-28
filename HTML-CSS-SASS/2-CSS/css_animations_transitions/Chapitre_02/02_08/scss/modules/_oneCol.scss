@@ -1,0 +1,8 @@
+#mainContent.oneCol{
+  section{
+    @extend .col-12;
+    @extend .col-xl-8;
+    @extend .offset-xl-2;
+    @extend .py-3;
+  }//end article
+}// end #mainContent.oneCol

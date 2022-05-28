@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Comprendre les Transformations - Rotate</title>
+  <style>
+    body{
+        padding: 300px;
+        background: #24436E;
+    }
+    div.wrapper{
+        width: 300px;
+        margin: 0 auto;
+    }
+    #cube{
+        box-sizing: border-box;
+        color:#FFF;
+        font-size: 5em;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        perspective-origin: -80px -250px;
+        transition: 2s;
+    }
+    #cube:hover{
+        perspective-origin: 380px 450px;
+    }
+    div.side{
+        box-sizing: border-box;
+        height: 300px;
+        width: 300px;
+        background: rgba(140,87,172,.7);
+        padding: 100px 0;
+        text-align: center;
+        border: solid 6px #C68335;
+        position: absolute;
+    }
+    #front{
+        transform: translateZ(150px);
+    }
+    #back{
+      transform: rotateY(-180deg) translateZ(150px);
+    }
+    #left{
+      transform: rotateY(-90deg) translateZ(150px);
+    }
+    #right{
+      transform: rotateY(90deg) translateZ(150px);
+    }
+    #top{
+      transform: rotateX(90deg) translateZ(150px);
+    }
+    #bottom{
+      transform: rotateX(-90deg) translateZ(150px);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section id="cube">
+      <div class="side" id="front">1</div>
+      <div class="side" id="back">2</div>
+      <div class="side" id="left">3</div>
+      <div class="side" id="right">4</div>
+      <div class="side" id="top">5</div>
+      <div class="side" id="bottom">6</div>
+    </section>
+  </div>
+</body>
+</html>

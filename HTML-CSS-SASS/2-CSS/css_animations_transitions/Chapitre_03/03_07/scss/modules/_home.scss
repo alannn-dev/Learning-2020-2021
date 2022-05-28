@@ -1,0 +1,63 @@
+#art-felice-Homelogo{
+  @extend .mx-auto;
+  @include make-col-ready();
+  @extend .py-5;
+  @extend .px-3;
+  @include media-breakpoint-up(md) {
+    max-width: 72%;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 50%;
+  }
+}
+#homeTableGrid{
+
+  @extend .mx-auto;
+  .homeArt{
+
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(xl) {
+      width: 80%;
+      padding: 0 60px 60px !important;
+    }
+    a{
+      border: none;
+      figure{
+          position: relative;
+          img{
+            @include border-radius();
+          }
+          figcaption{
+            @extend .w-100;
+            @extend .p-3;
+            @include feliceTitle(theme-color("felice-light-brown"));
+            font-size: $h4-font-size;
+            font-style: italic;
+            position: absolute;
+            bottom: 0;
+            @include background-opacity(theme-color("felice-white"));
+            @include border-bottom-radius($border-radius);
+          }
+      }//End figure
+      &:hover figure figcaption{
+        @include background-opacity(theme-color("felice-white"), 1);
+        @include transition($btn-transition);
+      }
+    }//end a
+  }//end .homeArt
+}//end #homeTableGrid
+
+
+#seeAllHome{
+  @include make-col-ready();
+  @extend .text-center;
+  a{
+    @extend .btn;
+    @extend .px-5;
+    @include feliceButton(theme-color("felice-red"), theme-color("felice-yellow"), theme-color("felice-white"));
+    border-width: 3px;
+  }
+}

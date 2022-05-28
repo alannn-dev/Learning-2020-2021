@@ -1,0 +1,24 @@
+//import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300i,400');
+
+//Import Custom variables
+@import "modules/variables";
+//import libraries
+
+@import "font-awesome/font-awesome";
+
+//Import bootstrap
+@import "bootstrap/bootstrap";
+
+
+
+//import custom files
+@import "modules/mixins";
+@import "modules/navbar";
+@import "modules/searchForm";
+@import "modules/main";
+@import "modules/footer";
+@import "modules/typography";
+
+//import page specific styleSheet
+@import "modules/galery";

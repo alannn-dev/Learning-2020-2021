@@ -1,0 +1,7 @@
+#mainContent.twoCols{
+  section{
+    @extend .col-12;
+    @extend .col-lg-6;
+    @extend .py-3;
+  }//end article
+}// end #mainContent.oneCol

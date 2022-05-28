@@ -1,0 +1,43 @@
+///////////////
+//Colors
+///////////////
+//Felice Colors
+////////////////
+$theme-colors: (
+  "felice-dark-brown": #25120B,
+  "felice-yellow": #FAB14B,
+  "felice-dark": #23273A,
+  "felice-red": #901412,
+  "felice-orange": #E75E30,
+  "felice-green": #C7AB50,
+  "felice-blue": #9DA2CF,
+  "felice-light-brown": #754E5C,
+  "felice-white": #E9E9E9,
+  "felice-grey": #777777
+);
+
+///////////////
+//Fonts
+///////////////
+
+//font-sizes
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-xs:                ($font-size-base * .625);
+
+//felice Fonts
+$felice-text-font: "Open Sans";
+$felice-title-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+
+
+
+///override Bootstrap fonts
+$font-family-sans-serif: $felice-text-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+
+///////////////
+//Sizes
+///////////////
+
+//navbar elements
+$felice-navbar-logo-width: 180px;
